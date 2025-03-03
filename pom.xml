@@ -13,16 +13,6 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>rag</name>
   <description>Code for Java RAG article</description>
-  <repositories>
-    <repository>
-      <id>spring-milestones</id>
-      <name>Spring Milestones</name>
-      <url>https://repo.spring.io/milestone</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
   <properties>
     <java.version>17</java.version>
   </properties>
