@@ -4,7 +4,7 @@ import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.reader.pdf.PagePdfDocumentReader;
 import org.springframework.ai.transformer.splitter.TokenTextSplitter;
-import org.springframework.ai.vectorstore.ElasticsearchVectorStore;
+import org.springframework.ai.vectorstore.elasticsearch.ElasticsearchVectorStore;
 import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.stereotype.Service;
 
@@ -39,11 +39,12 @@ public class RagService {
 
         // Querying the vector store for documents related to the question
         List<Document> vectorStoreResult =
-            vectorStore.doSimilaritySearch(SearchRequest.query(question).withTopK(5).withSimilarityThreshold(0.0));
+            vectorStore.doSimilaritySearch(SearchRequest.builder().query(question).topK(5)
+                    .similarityThreshold(0.6).build());
 
         // Merging the documents into a single string
         String documents = vectorStoreResult.stream()
-            .map(Document::getContent)
+            .map(Document::getText)
             .collect(Collectors.joining(System.lineSeparator()));
 
         // Setting the prompt with the context

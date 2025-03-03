@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.3.1</version>
+    <version>3.4.3</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>co.elastic.clients</groupId>
@@ -31,7 +31,7 @@
       <dependency>
         <groupId>org.springframework.ai</groupId>
         <artifactId>spring-ai-bom</artifactId>
-        <version>1.0.0-M3</version>
+        <version>1.0.0-M6</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -42,24 +42,24 @@
     <dependency>
       <groupId>org.springframework.ai</groupId>
       <artifactId>spring-ai-spring-boot-autoconfigure</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.0-M6</version>
     </dependency>
 
     <dependency>
       <groupId>org.springframework.ai</groupId>
       <artifactId>spring-ai-elasticsearch-store</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.0-M6</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.ai</groupId>
       <artifactId>spring-ai-pdf-document-reader</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.0-M6</version>
     </dependency>
 
     <dependency>
       <groupId>org.springframework.ai</groupId>
       <artifactId>spring-ai-openai</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.0-M6</version>
     </dependency>
 
     <!-- dependency added to solve to following error:-->
@@ -67,7 +67,7 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-websocket</artifactId>
-      <version>3.3.1</version>
+      <version>3.4.3</version>
     </dependency>
 
   </dependencies>
